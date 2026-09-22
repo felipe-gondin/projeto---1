@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: calc(25% - 20px);
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+/* Modal content (image) */
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: zoomIn 0.5s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Caption of modal image */
+.caption {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-item {
+     width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-item  {
+    width: calc(100% - 20px);
+  }
+}
+
+body.corpo {
+ margin: 0;
+  background-color: #f5efe6;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  
+}
+
+p.atracoes{
+  align-items:center;
+text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2.deco{
+  text-align: center;
+  color: black;
+  margin-top: 40px;
+  font-size: 26px;
+  text-shadow: white;
+}
+
+div.menu-links{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:  #0881a3;
+  border-radius: 50px;
+  max-width: 50%;
+  outline: 1px solid ;
+  margin: 15px auto;
+}
+
+body.corpo{
+  background-color:aquamarine;
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 1px solid rgb(103, 235, 191);
+  border: 9px solid rgb(88, 233, 185);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+
+.col-esquerda {
+  width: 40%;
+}
+
+.imagem img{
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  height: 500px;
+  width: 300px;
+  border-style: solid;
+}
+
+.imagem-igreja{
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  height: 350px;
+  width: 500px;
+  border-style: solid;
+}
+
+.legenda {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+
+.col-direita {
+  width: 60%;
+  background-color: #2fb8df;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 2px solid;
+}
+
+.texto-cinza {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.texto-cinza{
+  color: #111;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 40px;
+}
+
+.texto-preto {
+  color: #111;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .col-esquerda, .col-direita {
+    width: 100%;
+  }
+}
+
+.btn-voltar {
+  margin-left: 500px;
+  background-color: #0881a3;
+  display: inline-block;
+  padding: 7px 30px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.titulo{
+  max-width: 80%;
+  text-align: center;
+  background-color:#0881a3 ;
+  border-radius: 50px;
+  border-style: solid;
+  margin: 15px auto;
+}
+
+.mapa {
+  width: 40%;
+  object-fit: cover;
+  border: 2px solid ;
+  transform: translateY(70px);
+}
+
+.titulo-imagem{
+  transform: translateY(70px);
+}
+
+.farol{
+  height: 200px;
+  transform: translateY(70px);
+}
+
+.marco{
+  height: 300px;
+  width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  border-style: solid;
+  display: block;
+}
